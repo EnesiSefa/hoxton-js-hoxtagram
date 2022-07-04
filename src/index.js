@@ -31,7 +31,7 @@ function pageRender() {
   h2El.textContent = "Title of image goes here";
   let imgEl = document.createElement("img");
   imgEl.className = "image";
-  imgEl.src = ""
+  imgEl.src = "./assets/image-placeholder.jpg"
   let divEl = document.createElement("div");
   divEl.className = "likes-section";
   let spanEl = document.createElement("span");
