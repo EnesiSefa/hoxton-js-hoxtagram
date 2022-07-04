@@ -1,24 +1,16 @@
 {
-  "name": "day-14-hoxtagram-i-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "name": "hoxtagram-ii-crud-template",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "start": "serve",
-    "build": "echo This is a static template, there is no bundler or bundling involved!"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.9.7"
   },
   "keywords": [],
-  "author": "Ives van Hoorne",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
-  },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
-  "devDependencies": {
-    "serve": "^11.2.0"
-  }
+  "description": ""
 }
