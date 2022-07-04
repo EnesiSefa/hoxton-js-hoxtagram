@@ -5,26 +5,33 @@ const state = {
 };
 
 function render() {
-  pageRender();
+    // getImages()
+    pageRender();
 }
 render();
 
 function pageRender() {
+
   let logoEl = document.createElement("img");
   logoEl.className = "logo";
   logoEl.src = "assets/hoxtagram-logo.png";
 
-  let sectionEl = document.createElement("section");
-  sectionEl.className;
+  document.body.textContent = ""
 
-  let articleEl = document.createElement("article");
+  let sectionEl = document.createElement("section");
+  sectionEl.className = "image-container"
+
+  
+
+  for(let image of state.images) {
+   let articleEl = document.createElement("article");
   articleEl.className = "image-card";
   let h2El = document.createElement("h2");
   h2El.className = "title";
   h2El.textContent = "Title of image goes here";
   let imgEl = document.createElement("img");
   imgEl.className = "image";
-  imgEl.src = "./assets/image-placeholder.jpg";
+  imgEl.src = ""
   let divEl = document.createElement("div");
   divEl.className = "likes-section";
   let spanEl = document.createElement("span");
@@ -45,20 +52,29 @@ function pageRender() {
   let liEl3 = document.createElement("li");
   liEl3.textContent = "From the server";
 
-  document.body.append(logoEl, sectionEl);
-  sectionEl.append(articleEl);
-  articleEl.append(h2El, imgEl, divEl, ulEl);
+
+
+  
+  ulEl.append(liEl, liEl2, liEl3)
   divEl.append(spanEl, btnEl);
-  ulEl.append(liEl, liEl2, liEl3);
+  articleEl.append(h2El, imgEl, divEl, ulEl);
+  
+}
+  sectionEl.append(articleEl);
+  document.body.append(logoEl, sectionEl);
+
+
 }
 
-function getImages() {
-  fetch("http://localhost:3001/someData")
+
+
+
+  fetch("http://localhost:7000/images")
     .then((resp) => resp.json())
     .then((images) => {
       state.images = images;
     });
-}
+
 // Here you can do whatever you want with the data // from the 
 
 
