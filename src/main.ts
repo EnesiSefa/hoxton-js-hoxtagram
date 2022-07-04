@@ -105,11 +105,13 @@ function getImages() {
  getImages()
 
  function deleteComment(){
-  fetch('http://localhost:3333/images/6', {
+  fetch('http://localhost:5000/images/${images.comments}/', {
     method: "DELETE",
 })
     .then(resp => resp.json())
-    .then(data => console.log(data))
+    .then(Comments => {
+      state.images = Comments})
+      render()
  }
 
 //  
