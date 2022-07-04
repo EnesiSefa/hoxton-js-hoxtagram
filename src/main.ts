@@ -104,6 +104,19 @@ function getImages() {
 }
  getImages()
 
+ function deleteComment(){
+  fetch('http://localhost:3333/images/6', {
+    method: "DELETE",
+})
+    .then(resp => resp.json())
+    .then(data => console.log(data))
+ }
 
+//  
+// 
+// for(let comment of state.images){
+    
+//   let updatedState = state.images.filter(Comment => Comment.comments)
+// }
 
 
