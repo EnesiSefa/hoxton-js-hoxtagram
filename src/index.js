@@ -23,7 +23,7 @@ function pageRender() {
 
   
 
-  for(let image of state.images) {
+  
    let articleEl = document.createElement("article");
   articleEl.className = "image-card";
   let h2El = document.createElement("h2");
@@ -54,17 +54,15 @@ function pageRender() {
 
 
 
-  
+  sectionEl.append(articleEl);
+  document.body.append(logoEl, sectionEl);
   ulEl.append(liEl, liEl2, liEl3)
   divEl.append(spanEl, btnEl);
   articleEl.append(h2El, imgEl, divEl, ulEl);
   
 }
-  sectionEl.append(articleEl);
-  document.body.append(logoEl, sectionEl);
 
 
-}
 
 
 
